@@ -3,11 +3,16 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const name = "BESTCULLING"
 export const siteTitle = `${name} Blog Website`
 
 export default function Layout({ children, home }) {
+
+    // set theme prism
+    const [theme, setTheme] = useState('okaidia')
+
     // Automatically Generates Unique Class Names
     // layout_container__...
     return (
@@ -16,7 +21,7 @@ export default function Layout({ children, home }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Learn how to build a personal website using Next.js"
+                    content={siteTitle}
                 />
                 {/* which are used to describe a page's content */}
                 <meta
@@ -25,8 +30,38 @@ export default function Layout({ children, home }) {
                         siteTitle
                     )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
                 />
+                <meta content="width=device-width, initial-scale=1" name="viewport" />
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
+                <link
+                    as="style"
+                    rel="preload"
+                    href="https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css"
+                    as="script"
+                />
+                <link
+                    as="style"
+                    rel="preload"
+                    href="https://unpkg.com/prismjs@0.0.1/themes/prism-coy.css"
+                    as="script"
+                />
+                <link
+                    as="style"
+                    rel="preload"
+                    href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css"
+                    as="script"
+                />
+                <link
+                    as="style"
+                    rel="preload"
+                    href="https://unpkg.com/prismjs@0.0.1/themes/prism-funky.css"
+                    as="script"
+                />
+                <link
+                    as="style"
+                    href={`https://unpkg.com/prismjs@0.0.1/themes/prism-${theme}.css`}
+                    rel="stylesheet"
+                />
             </Head>
             <header className={styles.header}>
                 {home ? (
