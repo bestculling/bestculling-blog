@@ -42,14 +42,16 @@ export default function Index() {
 							className="rounded"
 						/>
 					</div>
-					<h1 className="text-white fw-bolder mt-5">
-						Hello there, I'm <span className='text-primary'>BESTCULLING</span>{' '}
-					</h1>
-					<p className="fw-bolder text-secondary">
-						Interested in Software Engineer
-					</p>
+					<div className="d-flex flex-column justify-content-center align-items-center">
+						<div className="text-white mt-5 ml-sm-2">
+							<h1>Hello there, I'm <span className="fw-bold text-primary">BESTCULLING</span>{' '}</h1>
+						</div>
+						<div className="fw-bolder text-secondary">
+							<p>Interested in Software Engineer</p>
+						</div>
+					</div>
 				</div>
-				<div className="d-flex mt-3">
+				<div className="d-flex mt-3 gap-2 gap-sm-5">
 					{links.map((link) => {
 						return (
 							<div key={link.id}>
@@ -58,14 +60,6 @@ export default function Index() {
 						)
 					})}
 				</div>
-				<style jsx>
-					{`
-						.main {
-							height: 100vh;
-							background: rgb(24 24 27);
-						}
-					`}
-				</style>
 			</div>
 		</>
 	)

@@ -7,7 +7,7 @@ export default function Sublink({ target, href, name }) {
 				href={target}
 				target="_blank"
 				passHref={href}
-				className="text-decoration-none btn btn-outline-secondary m-3"
+				className="text-decoration-none btn btn-outline-secondary"
 			>
 				{name}
 			</Link>
