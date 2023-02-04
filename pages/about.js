@@ -117,6 +117,7 @@ export default function About() {
 							alt="me"
 							width="300"
 							height="200"
+							className='rounded'
 						/>
 						<p className="px-2 text-center mt-3">
 							Botnoi DSE class 2
@@ -128,6 +129,7 @@ export default function About() {
 							alt="me"
 							width="300"
 							height="200"
+							className='rounded'
 						/>
 						<p className="px-2 text-center mt-3">
 							Face Detection Processing
@@ -137,7 +139,7 @@ export default function About() {
 			</div>
 			<div className="skills mt-5">
 				<h4 className="fw-bold">Skills</h4>
-				<div className="items px-4">
+				<div className="items px-4 d-flex flex-wrap gap-4">
 					<div className="item">Javascript</div>
 					<div className="item">Typescript</div>
 					<div className="item">HTML</div>

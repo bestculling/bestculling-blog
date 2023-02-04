@@ -1,56 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: rgb(249 250 251/1);
-}
-
-.menu {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu .content .head {
-    font-weight: 700;
-}
-
-.menu .content .position {
-    text-align: center;
-}
-
-.menu .content .profile {
-    border-radius: 2em;
-}
-
-.sub_menu {
-    width: 100%;
-    margin-top: 5em;
-    display: flex;
-    justify-content: space-around;
-}
-
-.sub_menu .sub_link {
-    cursor: pointer;
-    font-weight: 400;
-}
-
-.sub_menu .sub_link .link{
-    color: inherit; 
-    font-size: 1em;
-}
-
-.skills .items {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.skills .items .item {
-    margin: 1em;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }

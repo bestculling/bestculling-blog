@@ -2,42 +2,70 @@ import Sublink from '../components/Sublink'
 import Image from 'next/image'
 
 export default function Index() {
+	const links = [
+		{
+			id: 0,
+			target: '/about',
+			href: false,
+			name: 'portfolio',
+		},
+		{
+			id: 1,
+			target: 'https://medium.com/@aukkrapolarm',
+			href: true,
+			name: 'Medium',
+		},
+		{
+			id: 2,
+			target: 'https://github.com/bestculling',
+			href: true,
+			name: 'GitHub',
+		},
+		{
+			id: 3,
+			target: 'https://www.linkedin.com/in/akkrapol-kanpong-ab362214a/',
+			href: true,
+			name: 'Linkedin',
+		},
+	]
+
 	return (
 		<>
-			<div className="menu">
-				<div className="content">
-					<h1 className="mb-5 head fw-bolder">Akkrapol Kanpong</h1>
+			<div className="main d-flex flex-column justify-content-center align-items-center">
+				<div className="d-flex flex-column justify-content-center align-items-center">
 					<div>
 						<Image
 							src="/profile.jpeg"
 							alt="me"
 							width="300"
 							height="300"
-							className='profile'
+							className="rounded"
 						/>
 					</div>
-					<p className="mt-5 position fw-bolder text-secondary">
+					<h1 className="text-white fw-bolder mt-5">
+						Hello there, I'm <span className='text-primary'>BESTCULLING</span>{' '}
+					</h1>
+					<p className="fw-bolder text-secondary">
 						Interested in Software Engineer
 					</p>
 				</div>
-				<div className="sub_menu">
-					<Sublink target="/about" href={false} name="About me" />
-					<Sublink
-						target="https://medium.com/@aukkrapolarm"
-						href={true}
-						name="Medium"
-					/>
-					<Sublink
-						target="https://github.com/bestculling"
-						href={true}
-						name="Github"
-					/>
-					<Sublink
-						target="https://www.linkedin.com/in/akkrapol-kanpong-ab362214a/"
-						href={true}
-						name="Linkedin"
-					/>
+				<div className="d-flex mt-3">
+					{links.map((link) => {
+						return (
+							<div key={link.id}>
+								<Sublink {...link} />
+							</div>
+						)
+					})}
 				</div>
+				<style jsx>
+					{`
+						.main {
+							height: 100vh;
+							background: rgb(24 24 27);
+						}
+					`}
+				</style>
 			</div>
 		</>
 	)
