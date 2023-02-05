@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function About() {
 	return (
-		<div className="container py-5 mt-4">
+		<div className="container text-white py-5 mt-4">
 			<div className="header">
 				<h1 className="fw-bolder">Akkrapol Kanpong</h1>
 				<h4 className="fw-bolder text-secondary">Interested in Software Engineer</h4>
