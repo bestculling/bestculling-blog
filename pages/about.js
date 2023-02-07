@@ -6,19 +6,21 @@ export default function About() {
 		<div className="container text-white py-5 mt-4">
 			<div className="header">
 				<h1 className="fw-bolder">Akkrapol Kanpong</h1>
-				<h4 className="fw-bolder text-secondary">Interested in Software Engineer</h4>
+				<h4 className="fw-bolder text-secondary">
+					Interested in Software Engineer
+				</h4>
 			</div>
-			<div className="intern mt-5">
+			{/* <div className="intern mt-5">
 				<h4 className="fw-bold">Internships</h4>
 				<p className="px-4">-</p>
-			</div>
-			<div className="edu mt-5">
+			</div> */}
+			{/* <div className="edu mt-5">
 				<h4 className="fw-bold">Education</h4>
 				<p className="px-4 fw-bold text-secondary">
 					Bachelor of Computer Science at Suan Sunandha Rajabhat
 					University | 2021 - Present
 				</p>
-			</div>
+			</div> */}
 			<div className="projects mt-5">
 				<h4 className="fw-bold mb-4">Projects</h4>
 				<div className="px-4 d-flex flex-column flex-wrap gap-4">
@@ -117,7 +119,7 @@ export default function About() {
 							alt="me"
 							width="300"
 							height="200"
-							className='rounded'
+							className="rounded"
 						/>
 						<p className="px-2 text-center mt-3">
 							Botnoi DSE class 2
@@ -129,7 +131,7 @@ export default function About() {
 							alt="me"
 							width="300"
 							height="200"
-							className='rounded'
+							className="rounded"
 						/>
 						<p className="px-2 text-center mt-3">
 							Face Detection Processing
